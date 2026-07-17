@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c4nasj8wiqu5r"]
+
+[ext_resource type="Script" uid="uid://cdtnxwlqaf5kp" path="res://game/fruit/fruit.gd" id="1_1f4fc"]
+[ext_resource type="Texture2D" uid="uid://bav5ua5ne0vb5" path="res://assets/Snake.png" id="1_3jfc0"]
+
+[node name="Fruit" type="Node2D" unique_id=649298199]
+script = ExtResource("1_1f4fc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2020696442]
+texture = ExtResource("1_3jfc0")
+region_enabled = true
+region_rect = Rect2(16, 336, 16, 16)

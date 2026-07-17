@@ -1,0 +1,90 @@
+# Godot-generated project data (applies to projects at any depth)
+**/.godot/
+**/.import/
+**/.mono/
+**/android/
+**/mono_crash.*.json
+
+# Local Godot settings and export credentials
+**/override.cfg
+**/export_credentials.cfg
+
+# Exported games and conventional export/build directories
+**/build/
+**/builds/
+**/dist/
+**/exports/
+**/export/
+**/*.apk
+**/*.aab
+**/*.ipa
+**/*.pck
+**/*.app
+**/*.dmg
+**/*.x86_64
+**/*.arm64
+
+# Local secrets and environment files
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.sample
+!**/.env.template
+!**/.env.*.example
+!**/.env.*.sample
+!**/.env.*.template
+**/.secrets/
+**/.secret/
+**/secrets.*
+!**/secrets.example.*
+!**/secrets.sample.*
+!**/secrets.template.*
+**/credentials.json
+!**/credentials.example.json
+!**/credentials.sample.json
+!**/credentials.template.json
+**/client_secret*.json
+**/*service-account*.json
+**/*service_account*.json
+**/*-firebase-adminsdk-*.json
+**/.netrc
+**/.npmrc
+**/.pypirc
+
+# Signing keys, certificates with private keys, and credential stores
+**/*.keystore
+**/*.jks
+**/*.p12
+**/*.pfx
+**/*.pem
+**/*.key
+
+# C#/.NET build and user-specific files
+**/bin/
+**/obj/
+**/.vs/
+**/*.user
+**/*.suo
+
+# Editor and local agent state
+**/.idea/
+**/.vscode/
+**/.agents/
+**/.codex/
+**/.codex
+**/*.code-workspace
+
+# OS metadata
+**/.DS_Store
+**/Thumbs.db
+**/Desktop.ini
+
+# Logs, crash dumps, temporary files, and editor backups
+**/*.log
+**/*.tmp
+**/*.temp
+**/*.bak
+**/*.swp
+**/*.swo
+**/*~
+**/crash_dump_*.txt

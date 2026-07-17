@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://b76sgsvd0tipj"]
+
+[ext_resource type="Script" uid="uid://bnseg616sjrm4" path="res://app/main.gd" id="1_yblnd"]
+
+[node name="Main" type="Node" unique_id=1977513726]
+script = ExtResource("1_yblnd")
+
+[node name="Run" type="Node" parent="." unique_id=1882641928]
+
+[node name="Audio" type="Node" parent="." unique_id=326060909]
+
+[node name="World" type="Node2D" parent="." unique_id=659392079]
+
+[node name="Interface" type="CanvasLayer" parent="." unique_id=1993710865]
+
+[node name="HUD" type="MarginContainer" parent="Interface" unique_id=1441949977]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 220.0
+offset_bottom = 96.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="PanelContainer" parent="Interface/HUD" unique_id=1595269936]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Interface/HUD/Panel" unique_id=710753234]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="Interface/HUD/Panel/VBox" unique_id=645063967]
+layout_mode = 2
+text = "Score: 0"
+
+[node name="BestScoreLabel" type="Label" parent="Interface/HUD/Panel/VBox" unique_id=2128453850]
+layout_mode = 2
+text = "Best: 0"
+
+[node name="StartScreen" type="Control" parent="Interface" unique_id=987815704]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="Interface/StartScreen" unique_id=724753292]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.55)
+
+[node name="CenterContainer" type="CenterContainer" parent="Interface/StartScreen" unique_id=1136736084]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Interface/StartScreen/CenterContainer" unique_id=2028968138]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Interface/StartScreen/CenterContainer/Panel" unique_id=1479375991]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="Interface/StartScreen/CenterContainer/Panel/VBox" unique_id=1081444367]
+layout_mode = 2
+text = "Snake"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Interface/StartScreen/CenterContainer/Panel/VBox" unique_id=591415667]
+layout_mode = 2
+text = "Eat fruit. Avoid walls, obstacles, and yourself."
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="Interface/StartScreen/CenterContainer/Panel/VBox" unique_id=57389256]
+layout_mode = 2
+text = "Start Game"
+
+[node name="GameOverScreen" type="Control" parent="Interface" unique_id=447961836]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="Interface/GameOverScreen" unique_id=1804747810]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="CenterContainer" type="CenterContainer" parent="Interface/GameOverScreen" unique_id=833541574]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Interface/GameOverScreen/CenterContainer" unique_id=877691388]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Interface/GameOverScreen/CenterContainer/Panel" unique_id=426073310]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="Interface/GameOverScreen/CenterContainer/Panel/VBox" unique_id=1181795695]
+layout_mode = 2
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="ReasonLabel" type="Label" parent="Interface/GameOverScreen/CenterContainer/Panel/VBox" unique_id=1342865336]
+layout_mode = 2
+text = "You crashed."
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Interface/GameOverScreen/CenterContainer/Panel/VBox" unique_id=1908456784]
+layout_mode = 2
+text = "Score: 0"
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="Interface/GameOverScreen/CenterContainer/Panel/VBox" unique_id=468678142]
+layout_mode = 2
+text = "Play Again"
