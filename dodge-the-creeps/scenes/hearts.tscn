@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cj0l8nj6qulea"]
+
+[ext_resource type="Script" uid="uid://b2da1mlqcf1hi" path="res://scripts/hearts.gd" id="1_14ev0"]
+[ext_resource type="Texture2D" uid="uid://cmd2jnks3jmtd" path="res://assets/art/heart.png" id="1_ruow3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14ev0"]
+atlas = ExtResource("1_ruow3")
+region = Rect2(25, 0, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hugpe"]
+atlas = ExtResource("1_ruow3")
+region = Rect2(625, 0, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6mno"]
+atlas = ExtResource("1_ruow3")
+region = Rect2(25, 600, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f4b7"]
+atlas = ExtResource("1_ruow3")
+region = Rect2(625, 600, 600, 600)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hugpe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14ev0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hugpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6mno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f4b7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_imeni"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14ev0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hugpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6mno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f4b7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="HBoxContainer2" type="HBoxContainer" unique_id=2030639030]
+offset_right = 174.0
+offset_bottom = 64.0
+script = ExtResource("1_14ev0")
+
+[node name="Heart1" type="AnimatedSprite2D" parent="." unique_id=1498775122]
+position = Vector2(31.999998, 31.999998)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_hugpe")
+
+[node name="Heart2" type="AnimatedSprite2D" parent="." unique_id=1084799090]
+position = Vector2(88, 32)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_imeni")
+frame_progress = 0.5256664
+
+[node name="Heart3" type="AnimatedSprite2D" parent="." unique_id=1306401228]
+position = Vector2(144, 31.999998)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_imeni")
+frame_progress = 0.5256664

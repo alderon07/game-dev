@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://kyb4aqb8vs1s"]
+
+[ext_resource type="Script" uid="uid://d2bpce17pp0ot" path="res://scripts/hud.gd" id="1_oo0fn"]
+[ext_resource type="FontFile" uid="uid://bhc6e8flwod5r" path="res://assets/fonts/Xolonium-Regular.ttf" id="2_5ysmq"]
+[ext_resource type="PackedScene" uid="uid://cj0l8nj6qulea" path="res://scenes/hearts.tscn" id="3_5ysmq"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_oo0fn"]
+action = &"start_game"
+
+[sub_resource type="Shortcut" id="Shortcut_5ysmq"]
+events = [SubResource("InputEventAction_oo0fn")]
+
+[node name="HUD" type="CanvasLayer" unique_id=675964211]
+script = ExtResource("1_oo0fn")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1714835809]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.5
+offset_right = 45.5
+offset_bottom = 78.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_5ysmq")
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Message" type="Label" parent="." unique_id=313874185]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -120.0
+offset_right = 240.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_5ysmq")
+theme_override_font_sizes/font_size = 64
+text = "Doge the Creeps!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="StartButton" type="Button" parent="." unique_id=1969327312]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -195.0
+offset_top = -140.0
+offset_right = 195.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_5ysmq")
+theme_override_font_sizes/font_size = 64
+shortcut = SubResource("Shortcut_5ysmq")
+text = "Start Game"
+
+[node name="MessageTimer" type="Timer" parent="." unique_id=484791927]
+wait_time = 2.0
+one_shot = true
+
+[node name="HeartContainer" parent="." unique_id=1143601920 instance=ExtResource("3_5ysmq")]
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
