@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dtuhw2fdrctvk"]
+
+[node name="Coin" type="Area2D" unique_id=2005216685]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1355194242]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=856145523]
